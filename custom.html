@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Property</title>
+    <style>
+        :root {
+            --main-color: royalblue;
+            --border-color: 5px solid royalblue;
+            --dark-border: 5px solid black;
+        }
+
+        h1 {
+            color: var(--main-color);
+        }
+
+        p {
+            color: var(--main-color);
+        }
+
+        h2 {
+            color: var(--main-color);
+            border: var(--border-color)
+        }
+
+        .side-nav,
+        .blogs {
+            float: left;
+        }
+
+        aside {
+            background-color: yellow;
+            height: 500px;
+            width: 200px;
+        }
+
+        .blogs {
+            background-color: tomato;
+            height: 500px;
+            width: calc(100% - 200px);
+        }
+
+        footer {
+            clear: both;
+            color: var(--main-color);
+            border: var(--dark-border);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem, ipsum dolor.</p>
+    </header>
+    <main>
+        <h2>My awesome content</h2>
+        <section>
+            <aside class="side-nav">
+                my side navigation
+            </aside>
+            <div class="blogs">
+                <h3>Blogs</h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p><small>copyright</small></p>
+    </footer>
+</body>
+
+</html>
